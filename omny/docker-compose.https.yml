@@ -1,0 +1,22 @@
+# Production add-on: automatic HTTPS via Caddy.
+# Usage (on your server, after pointing DNS at it and setting APP_URL=https://YOUR_DOMAIN in .env):
+#   DOMAIN=assets.example.com docker compose -f docker-compose.local.yml -f omny/docker-compose.https.yml up -d
+volumes:
+  caddy_data:
+
+services:
+  app:
+    ports: !reset []
+    environment:
+      SECURE_COOKIES: "true"
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+    command: caddy reverse-proxy --from ${DOMAIN:?set DOMAIN} --to app:80
+    depends_on:
+      - app
