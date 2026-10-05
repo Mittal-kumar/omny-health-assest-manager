@@ -5,7 +5,7 @@
 {{ trans('mail.test_mail_text') }}
 
 Thanks,
-Snipe-IT
+Omny Health Asset Manager
 @if ($setupCompleted)
 @endcomponent
 @endif

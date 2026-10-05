@@ -98,7 +98,7 @@ $style = [
                                     {{ $snipeSettings->site_name }}
                                 @endif
                             @else
-                                Snipe-IT
+                                Omny Health Asset Manager
                             @endif
                         </td>
                     </tr>

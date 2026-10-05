@@ -21,7 +21,7 @@
         <label for="site_name">
           {{ trans('general.site_name') }}
         </label>
-        {{ Form::text('site_name', old('site_name'), array('class' => 'form-control','placeholder' => 'Snipe-IT Asset Management', 'required' => true)) }}
+        {{ Form::text('site_name', old('site_name'), array('class' => 'form-control','placeholder' => 'Omny Health Asset Manager', 'required' => true)) }}
 
         {!! $errors->first('site_name', '<span class="alert-msg" aria-hidden="true">:message</span>') !!}
       </div>

@@ -57,7 +57,7 @@
 @if($snipeSettings::setupCompleted())
 © {{ date('Y') }} {{ $snipeSettings->site_name }}. All rights reserved.
 @else
-© {{ date('Y') }} Snipe-IT. All rights reserved.
+© {{ date('Y') }} Omny Health Asset Manager. All rights reserved.
 @endif
 
 @if ($snipeSettings->privacy_policy_link!='')
